@@ -14,24 +14,8 @@ class App extends React.Component{
     city:undefined,
     country:undefined,
     description:undefined,
-    beers:[]
     
 
-  }
-  componentDidMount(){
-    const api_url="http://apichallenge.canpango.com/beers/";
-        fetch(api_url).then((data)=>{
-          
-            return data.json();
-        }).then((data)=>{
-          console.log(data);
-            this.setState(()=>{
-               return {
-                   beers:data
-               }
-            });
-        });
-        
   }
   getWeather = async (e)=>{
     e.preventDefault();
